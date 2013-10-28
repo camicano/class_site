@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  bio: MyText
+  email: MyString
+  github: MyString
+  website: MyString
+  twitter: MyString
+  project_url: MyString
+  project_url2: MyString
+  project_url3: MyString
+  other: MyString
+
+two:
+  name: MyString
+  bio: MyText
+  email: MyString
+  github: MyString
+  website: MyString
+  twitter: MyString
+  project_url: MyString
+  project_url2: MyString
+  project_url3: MyString
+  other: MyString
