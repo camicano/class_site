@@ -13,3 +13,69 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function(){
+	$.ajax({
+		url: '/',
+		method: 'get',
+		dataType: 'json'
+	}).done(function(data){
+		$.each(data, function(index, student){
+			var html = '<div><p id="' + student.id + '">' + student.name + '</p><div class="' + student.id + '"></div></div>';
+			$('#container').append(html);
+			var id = '#' + student.id;
+
+			$(id).on('click', function(e){
+				e.preventDefault();
+				$('.info').empty();
+				var url = this.innerText;
+ 
+				$.ajax({
+					url: '/show/' + url,
+					method: 'get',
+					dataType: 'json'
+				}).done(function(data){
+
+					var html = '<div class="info">';
+
+					html += '<h3>Contact Info</h3>';
+					html +='<p>' + student.email + '</p>';
+
+					if(student.website){
+						html += '<a href="' + student.website + '" target="blank"><p>' + student.website + '</p></a>';
+					}
+					if(student.github){
+						html += '<a href="http://github.com/' + student.github + '" target="blank"><p>' + student.github + '</p></a>';
+					}
+					if(student.twitter){
+						html += '<a href="http://twitter.com/' + student.twitter + '" target="blank"><p>' + student.twitter + '</p></a>';
+					}
+
+					if(student.bio){
+						html += '<p>' + student.email + '</p>';
+					}
+
+					if(student.project_url || student.project_url2 || student.project_url3){
+						html += '<h3>Work</h3>';
+					}
+
+					if(student.project_url){
+						html += '<a href="' + student.project_url + '" target="blank"><p>' + student.project_url + '</p></a>';
+					}
+					if(student.project_url2){
+						html += '<a href="' + student.project_url2 + '" target="blank"><p>' + student.project_url2 + '</p></a>';
+					}
+					if(student.project_url3){
+						html += '<a href="' + student.project_url3 + '" target="blank"><p>' + student.project_url3 + '</p></a>';
+					}
+
+					html += '</div>';
+
+					console.log(html);
+											
+					$('.' + data.id).append(html);
+				});
+			});
+		});
+	});
+});

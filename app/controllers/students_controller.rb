@@ -9,10 +9,9 @@ class StudentsController < ApplicationController
   end
 
   def show
-  	@student = Student.find(:id)
+  	@student = Student.find_by_name(params[:slug])
 
   	respond_to do |format|
-  		format.html
   		format.json { render :json => @student.to_json }
   	end
   end

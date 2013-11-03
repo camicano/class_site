@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Student.delete_all
+
+Student.create name: 'Adam McCabe',	email: 'ajm845@gmail.com'						
+Student.create name: 'Alex Gaynor',	email: 'agaynor72@gmail.com', website: 'http://www.noob.com'				
+Student.create name: 'Anthony Brancazo',	email: 'a.branc100@gmail.com',	github:'apbran'					
+Student.create name: 'Chandler Moisen',	email: 'chandler.moisen@gmail.com',	github: 'cheshireoctopus',	website: 'http://www.chandlermoisen.com', twitter:'@chandlermoisen', project_url: 'http://spatially.herokuapp.com/'	
+Student.create name: 'Christopher Huyett', email:	'huyettcp@gmail.com'						
+Student.create name: 'David Han',	email: 'davidhan527@gmail.com', github: 'davidhan527',	website: 'www.han-david.com', project_url: 'http://faddy.herokuapp.com', project_url2:	'http://sound-ocean.com'
+Student.create name: 'Francesca Wedemeyer',	email: 'flwedemeyer@gmail.com'						
+Student.create name: 'Javier Fernandez', email: 'jfernadel@gmail.com', github: 'jeivar', website: 'http://jeivar.com', twitter:	'@potiland', project_url2: 'http://foodme.us'			
+Student.create name: 'Cassie Walther', email: 'cassie.walther@gmail.com'
+Student.create name: 'Joseph Jung', email: 'joej21@gmail.com', github: 'joe21', website:	'http://www.joehjung.com', twitter: '@joej2121'			
+Student.create name: 'Lane Burks', email: 'lcburks@gmail.com'
+Student.create name: 'Matt Marcello', email: 'matt.marcello@gmail.com', github: 'mattmarcello',	website: 'http://www.mattmarcello.com'				
+Student.create name: 'Michael Glumac', email: 'mglumac@gmail.com'						
+Student.create name: 'Camila Cano',	email: 'camilacanog@gmail.com',	github: 'camicano', website: 'http://www.camicano.com',	bio: 'I am a full stack web developer, sound designer and music composer. Native of Bogota, Colombia and New Yorker at hear. I am passionate about web development because it is a tool to redifine how we do everything. whenever I am sad I remember that otters hold hands while they sleep.', project_url: 'http://yogapp.herokuapp.com/', project_url2: 'http://foodme.us'
+Student.create name: 'Mitul Patel', email: 'mitulp91@gmail.com'						
+Student.create name: 'Neel Patel', email: 'neelp22@gmail.com'						
+Student.create name: 'Rudy Crespo', email: 'rudycrespo@hushmail.com', github: 'rcrespo9', website: 'http://www.rudycrespo.com'				
+Student.create name: 'Samuel Spector', email: 'samalden.spector@gmail.com'						
+Student.create name: 'Scott Norvell', email: 'scottlnorvell@gmail.com', github: 'ScottLNorvell',	project_url: 'http://www.scottlnorvell.com', twitter: '@scottlnorvell', project_url: 'http://abcrowd-composers.herokuapp.com/', project_url2: 'http://sound-ocean.com/'
+Student.create name: 'Stan Kudrow', email: 'st4sik@gmail.com'						
+Student.create name: 'Sunmi Oh', email: 'ohsun14@gmail.com', github: 'ohsunmi', website: 'www.sunmioh.com', twitter:	'@whatupsun', project_url: 'retwitr.herokuapp.com', project_url2: 'www.tomatotxt.com'
+Student.create name: 'Wesley Yu', email: 'wesleyhl.yu@gmail.com'						
+Student.create name: 'Winson Yuan', email: 'winson.yuan@hotmail.com'						
+Student.create name: 'Heather Wigmore', email: 'wigmore.heather@gmail.com'						
