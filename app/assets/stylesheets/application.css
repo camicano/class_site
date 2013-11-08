@@ -11,12 +11,57 @@
  *= require_self
  *= require_tree .
  */
+html {
+	padding: 0px;
+}
 
 body {
-	background: url('main.png');
+	background-image: url('main.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Raleway'
 }
+
+div {
+	padding: 0px;
+	margin: 0px;
+}
+
+#footer {
+	color: white;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	font-size: 0.7em;
+	background-color: #292929;
+	position: fixed;
+	height: 70px;
+	bottom: 0px;
+	text-align: center;	
+}
+
+#img {
+	float: right;
+	padding: 5px;
+}
+
+#img img {
+	padding-top: 10px;
+	padding-right: 20px;
+	height: 140px;
+	width: auto;
+}
+
+#footer div {
+	padding: .7%;
+	display: inline-block;
+}
+
+#footer div:hover {
+	cursor: pointer;
+} 
 
 .info {
 	background: yellow; 
@@ -29,10 +74,26 @@ body {
 	margin: 5px;
 	width: 200px;
 	height: 200px;
-	opacity: 0;
+	opacity: 1;
 	display: inline-block;
 }
 
 .student:hover {
 	opacity: 1;
+
 }
+
+.student img{
+	width: 60px;
+	height: auto;
+}
+
+
+
+
+
+
+
+
+
+

@@ -24,7 +24,7 @@ function ajax(){
 		dataType: 'json'
 	}).done(function(data){
 		$.each(data, function(index, student){
-			var html = '<div class="student" id="' + student.id + '"><p>' + student.name + '</p><div class="' + student.id + '"></div></div>';
+			var html = '<div class="student" id="' + student.id + '"><p>' + student.name + '</p><img src="assets/triangle.png" /><div class="' + student.id + '"></div></div>';
 			$('#container').append(html);
 			var id = '#' + student.id;
 
