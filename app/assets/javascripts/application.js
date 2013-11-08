@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require_tree .
 
+var width = $(window).outerWidth();
+var height = $(window).outerHeight();
+
 $(function(){
 	$.ajax({
 		url: '/',
@@ -21,7 +24,7 @@ $(function(){
 		dataType: 'json'
 	}).done(function(data){
 		$.each(data, function(index, student){
-			var html = '<div><p id="' + student.id + '">' + student.name + '</p><div class="' + student.id + '"></div></div>';
+			var html = '<div class="student" id="' + student.id + '"><p>' + student.name + '</p><div class="' + student.id + '"></div></div>';
 			$('#container').append(html);
 			var id = '#' + student.id;
 
@@ -35,6 +38,7 @@ $(function(){
 					method: 'get',
 					dataType: 'json'
 				}).done(function(data){
+					this.parent.
 
 					var html = '<div class="info">';
 
@@ -52,7 +56,7 @@ $(function(){
 					}
 
 					if(student.bio){
-						html += '<p>' + student.email + '</p>';
+						html += '<p>' + student.bio + '</p>';
 					}
 
 					if(student.project_url || student.project_url2 || student.project_url3){
@@ -70,9 +74,11 @@ $(function(){
 					}
 
 					html += '</div>';
-
-					console.log(html);
-											
+					$('#' + data.id).css({
+						"top": 0,
+						"width": width + "px",
+						"height": height + "px"
+					});
 					$('.' + data.id).append(html);
 				});
 			});

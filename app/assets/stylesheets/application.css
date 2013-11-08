@@ -12,6 +12,23 @@
  *= require_tree .
  */
 
+body {
+	background-image: url(main.jpg);
+}
+
 .info {
 	background: yellow; 
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+}
+
+.student {
+	margin: 5px;
+	width: 200px;
+	height: 200px;
+	background: green;
+	opacity: 0.3;
+	display: inline-block;
+	
 }
