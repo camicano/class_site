@@ -22,6 +22,8 @@ end
 
 gem "animate-rails"
 
+gem "font-awesome-rails", "~> 3.2.1"
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password

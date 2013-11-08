@@ -13,7 +13,9 @@
  */
 
 body {
-	background-image: url(main.jpg);
+	background: url('main.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .info {
@@ -27,8 +29,10 @@ body {
 	margin: 5px;
 	width: 200px;
 	height: 200px;
-	background: green;
-	opacity: 0.3;
+	opacity: 0;
 	display: inline-block;
-	
+}
+
+.student:hover {
+	opacity: 1;
 }
