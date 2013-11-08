@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131103222715) do
+ActiveRecord::Schema.define(:version => 20131108033415) do
 
   create_table "students", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20131103222715) do
     t.string   "project1_photo"
     t.string   "project2_photo"
     t.string   "project3_photo"
+    t.integer  "image_percent"
   end
 
 end
