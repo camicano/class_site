@@ -91,10 +91,26 @@ function ajax(){
 	});
 }
 
+function footer(){
+	$('#footer').css({
+		"position": "absolute",
+		"height": 80 + "%"
+	});
+	$('#footer_content').show();
+	$('#footer_button').on('click', function(){
+		$('#footer').css({
+		"position": "fixed",
+		"height": 70 + "px"
+		});
+	});
+}
+
 $(function(){
+	$('#footer_content').hide();
 	ajax();
-
-
+	$('#footer').on('click', function(){
+		footer();
+	});
 });
 
 

@@ -21,7 +21,9 @@ body {
 	background-repeat: no-repeat;
 	padding: 0px;
 	margin: 0px;
-	font-family: 'Raleway'
+	font-family: 'Raleway';
+	font-size: 0.7em;
+	color: white;
 }
 
 div {
@@ -30,11 +32,9 @@ div {
 }
 
 #footer {
-	color: white;
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
-	font-size: 0.7em;
 	background-color: #292929;
 	position: fixed;
 	height: 70px;
@@ -71,16 +71,18 @@ div {
 }
 
 .student {
+	font-size: 1.5em;
 	margin: 5px;
-	width: 200px;
-	height: 200px;
-	opacity: 1;
+	width: 100px;
+	height: 100px;
+	opacity: 0;
+	background-color: green;
 	display: inline-block;
 }
 
 .student:hover {
 	opacity: 1;
-
+	cursor: pointer;
 }
 
 .student img{
