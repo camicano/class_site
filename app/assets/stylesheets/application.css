@@ -8,6 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require animate
  *= require_self
  *= require_tree .
  */
@@ -41,6 +42,10 @@ div {
 	/*height: 70px;*/
 	bottom: 0px;
 	text-align: center;	
+	-webkit-animation-duration: 0.5s;
+	-moz-animation-duration: 0.5s;
+	-ms-animation-duration: 0.5s;
+	-o-animation-duration: 0.5s;
 }
 
 #img {
@@ -81,7 +86,6 @@ div {
 	width: 100px;
 	height: 100px;
 	opacity: 0;
-	background-color: green;
 }
 
 .student:hover {
