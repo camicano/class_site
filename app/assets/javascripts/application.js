@@ -44,17 +44,17 @@ function ajax(){
 				}).done(function(data){
 					$('#container :not("#'+data.id+'")').hide();
 					$('#'+data.id+'').css({
-						"width": (width - 40) + 'px',
-						"height": (height - 100) + 'px',
-						"margin-bottom": 50 + 'px',
-						"margin-top": 40 + 'px',
-						"left": "10px",
-						"top": "20px"
+						"width": '80%',
+						"height": '80%',
+						"left": "10%",
+						"top": "5%",
+						"opacity": "0.8"
 					});
 
 
 					var html = '<div class="info">';
-					html += '<h3>Contact Info<i class="icon-times icon-3x"></i></h3>';
+					html += '<div><img id="info-img" src="'+student.photo_link+'" /></div>'
+					html += '<div><h3>Contact Info<i class="icon-times icon-3x"></i></h3>';
 					html +='<p>' + student.email + '</p>';
 
 					if(student.website){
@@ -69,8 +69,8 @@ function ajax(){
 					if(student.project_url){
 						html += '<a href="' + student.project_url + '" target="blank"><p>' + student.project_url + '</p></a>';
 					}
-
 					html += '<p class="exit-button">Exit</p></div>';
+					html += '</div>'
 					$('#' + data.id).addClass('animated fadeInUp');
 					$('#' + data.id).append(html);
 
