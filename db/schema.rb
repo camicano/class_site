@@ -11,26 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131108033415) do
+ActiveRecord::Schema.define(:version => 20131118201557) do
 
   create_table "students", :force => true do |t|
     t.string   "name"
-    t.text     "bio"
     t.string   "email"
     t.string   "github"
     t.string   "website"
-    t.string   "twitter"
-    t.string   "project_url"
-    t.string   "project_url2"
-    t.string   "project_url3"
-    t.string   "other"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.string   "photo_link"
-    t.string   "project1_photo"
-    t.string   "project2_photo"
-    t.string   "project3_photo"
-    t.integer  "image_percent"
+    t.integer  "left_percent"
+    t.string   "project_photo_url"
+    t.string   "top_percent"
   end
 
 end

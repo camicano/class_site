@@ -24,10 +24,14 @@ function ajax(){
 		dataType: 'json'
 	}).done(function(data){
 		$.each(data, function(index, student){
-			var html = '<div class="student" id="' + student.id + '"><p>' + student.name + '</p><img src="assets/triangle.png" /><div class="' + student.id + '"></div></div>';
+			var html = '<div class="student" id="' + student.id + '"><p>' + student.name + '</p><img id="triangle" src="assets/triangle.png" /><div class="' + student.id + '"></div></div>';
 			$('#container').append(html);
 			var id = '#' + student.id;
-
+			$('#' + student.id).css({
+				"position": "absolute",
+				"left": student.left_percent + '%',
+				"top": student.top_percent
+			});
 			$(id).on('click', function(e){
 				e.preventDefault();
 				$('.info').empty();
@@ -91,25 +95,30 @@ function ajax(){
 	});
 }
 
-function footer(){
+function footerOut(){
 	$('#footer').css({
-		"position": "absolute",
 		"height": 80 + "%"
 	});
 	$('#footer_content').show();
-	$('#footer_button').on('click', function(){
-		$('#footer').css({
-		"position": "fixed",
+}
+
+function footerIn(){
+	$('#footer_content').hide();
+	$('#footer').css({
 		"height": 70 + "px"
-		});
 	});
 }
 
 $(function(){
 	$('#footer_content').hide();
 	ajax();
-	$('#footer').on('click', function(){
-		footer();
+	$('#about').on('click', function(e){
+		e.preventDefault();
+		footerOut();
+	});
+	$('#footer-button').on('click', function(e){
+		e.preventDefault();
+		footerIn();
 	});
 });
 
