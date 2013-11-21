@@ -24,7 +24,7 @@ function ajax(){
 		dataType: 'json'
 	}).done(function(data){
 		$.each(data, function(index, student){
-			var html = '<div class="student" id="' + student.id + '"><p>' + student.name + '</p><img id="triangle" src="assets/triangle.png" /><div class="' + student.id + '"></div></div>';
+			var html = '<div class="student" id="' + student.id + '"><p id="underline">' + student.name + '</p><img id="triangle" src="assets/triangle.png" /><div class="' + student.id + '"></div></div>';
 			$('#container').append(html);
 			var id = '#' + student.id;
 			$('#' + student.id).css({
@@ -53,22 +53,20 @@ function ajax(){
 
 
 					var html = '<div class="info">';
-					html += '<div><img id="info-img" src="'+student.photo_link+'" /></div>'
-					html += '<div><h3>Contact Info<i class="icon-times icon-3x"></i></h3>';
-					html +='<p>' + student.email + '</p>';
+					html += '<div id="infoimg"><img src="'+student.photo_link+'" /></div>';
+					html +='<h2>' + student.name + '</h2>';
+					html += '<p>' + student.github + '</p>';
+					html += '<p>' + student.email + '</p>';
+
+					html += '<img src="' + student.project_photo_url + '/>';
 
 					if(student.website){
-						html += '<a href="' + student.website + '" target="blank"><p>' + student.website + '</p></a>';
+						var link = student.website;
+					}else{
+						var link = student.github;	
 					}
-					if(student.github){
-						html += '<a href="http://github.com/' + student.github + '" target="blank"><p>' + student.github + '</p></a>';
-					}
-					if(student.project_url || student.project_url2 || student.project_url3){
-						html += '<h3>Work</h3>';
-					}
-					if(student.project_url){
-						html += '<a href="' + student.project_url + '" target="blank"><p>' + student.project_url + '</p></a>';
-					}
+
+					html += '<p><a href="' + link + '"'
 					html += '<p class="exit-button">Exit</p></div>';
 					html += '</div>'
 					$('#' + data.id).addClass('animated fadeInUp');

@@ -23,9 +23,9 @@ body {
 	background-repeat: no-repeat;
 	padding: 0px;
 	margin: 0px;
-	font-family: 'Raleway';
+	font-family: 'Aller';
 	font-size: 0.7em;
-	color: #292929;
+	color: white;
 }
 
 div {
@@ -61,6 +61,10 @@ div {
 	width: auto;
 }
 
+#about {
+	font-family: 'Raleway';
+}
+
 #footer div {
 	padding: .7%;
 }
@@ -88,11 +92,6 @@ div {
 	display: inline-block;
 }
 
-.info div img {
-	width: 60%;
-	padding: 5%;	
-}
-
 .student {
 	font-size: 1.5em;
 	width: 100px;
@@ -100,22 +99,34 @@ div {
 	opacity: 0;
 }
 
+#underline {
+	background-color: black;
+	border-radius: 2px;
+	padding: 2px;
+}
+
 .student:hover {
 	opacity: 1;
 	cursor: pointer;
-}
-
-.student img{
-	width: 60px;
-	height: auto;
 }
 
 #triangle {
 	position: absolute;
 	top: 50px;
 	left: 50px;
+	width: 60px;
+	height: auto;
 }
 
+#infoimg {
+	height: 90%;
+	padding-left: 10%;
+	margin-top: 2%;
+}
+
+#infoimg img {
+	height: 100%;
+}
 
 
 
