@@ -83,7 +83,7 @@ div {
 	opacity: 1;
 	width: 100%;
 	height: 100%;
-	display: inline-block;
+	display: block;
 }
 
 .info div {
@@ -128,7 +128,15 @@ div {
 	height: 100%;
 }
 
-
+#projimg {
+	height: 50%;
+	width: auto;
+	position: relative;
+	overflow: auto;
+	border: solid 25px white;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
 
 
 
