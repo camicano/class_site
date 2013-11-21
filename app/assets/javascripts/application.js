@@ -97,7 +97,7 @@ function ajax(){
 
 function footerOut(){
 	$('#footer').css({
-		"height": 80 + "%"
+		"height": 100 + "%"
 	});
 	$('#footer_content').show();
 }
@@ -105,7 +105,7 @@ function footerOut(){
 function footerIn(){
 	$('#footer_content').hide();
 	$('#footer').css({
-		"height": 70 + "px"
+		"height": 10 + "%"
 	});
 }
 
