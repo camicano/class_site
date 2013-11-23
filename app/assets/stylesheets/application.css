@@ -23,7 +23,8 @@ body {
 	background-repeat: no-repeat;
 	padding: 0px;
 	margin: 0px;
-	font-family: 'Raleway';
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 	font-size: 0.7em;
 	color: white;
 }
@@ -31,6 +32,21 @@ body {
 div {
 	padding: 0px;
 	margin: 0px;
+}
+
+.button {
+	background: none;
+	border: 2px solid #fff;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	color: #fff;
+	width: 266px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #footer {
