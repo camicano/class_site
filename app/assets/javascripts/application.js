@@ -92,6 +92,8 @@ function footerOut(){
 	$('#footer').removeClass('fadeInDown');
 	$('#footer').addClass('animated fadeInUp');
 	$('#footer_content').show();
+	$('#about').hide();
+	$('#footer-button').show();
 }
 
 function footerIn(){
@@ -101,6 +103,8 @@ function footerIn(){
 	});
 	$('#footer').removeClass('fadeInUp');
 	$('#footer').addClass('animated fadeInDown');
+	$('#about').show();
+	$('#footer-button').hide();
 }
 
 $(function(){
