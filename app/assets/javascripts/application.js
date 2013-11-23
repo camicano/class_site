@@ -54,9 +54,9 @@ function ajax(){
 
 					var html = '<div class="info">';
 					html += '<div id="infoimg"><img src="' + student.photo_link + '" /></div>';
-					html +='<div><h2>' + student.name + '</h2>';
-					html += '<p>' + student.github + '</p>';
-					html += '<p>' + student.email + '</p>';
+					html +='<div class="studentinfo"><h2>' + student.name + '</h2>';
+					// html += '<p>' + student.github + '</p>';
+					html += '<h3>' + student.email + '</h3>';
 
 					html += '<img id="projimg" src="' + student.project_photo_url + '" />';
 
@@ -67,7 +67,7 @@ function ajax(){
 					}
 
 					html += '<p><a href="' + link + '" target="blank">More about '+ student.name +'</a></p>'
-					html += '<p class="exit-button">Exit</p></div>';
+					// html += '<p class="exit-button">Exit</p></div>';
 					html += '</div>'
 					$('#' + data.id).addClass('animated fadeInUp');
 					$('#' + data.id).append(html);
