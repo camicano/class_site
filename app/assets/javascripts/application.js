@@ -34,7 +34,7 @@ function ajax(){
 			});
 			$(id).on('click', function(e){
 				e.preventDefault();
-				$('.info').empty();
+				// $('.info').empty();
 				var url = this.innerText;
  
 				$.ajax({
@@ -53,20 +53,20 @@ function ajax(){
 
 
 					var html = '<div class="info">';
-					html += '<div id="infoimg"><img src="'+student.photo_link+'" /></div>';
-					html +='<h2>' + student.name + '</h2>';
+					html += '<div id="infoimg"><img src="' + student.photo_link + '" /></div>';
+					html +='<div><h2>' + student.name + '</h2>';
 					html += '<p>' + student.github + '</p>';
 					html += '<p>' + student.email + '</p>';
 
-					html += '<img src="' + student.project_photo_url + '/>';
+					html += '<img id="projimg" src="' + student.project_photo_url + '" />';
 
 					if(student.website){
 						var link = student.website;
 					}else{
-						var link = student.github;	
+						var link = student.github;						
 					}
 
-					html += '<p><a href="' + link + '"'
+					html += '<p><a href="' + link + '" target="blank">More about '+ student.name +'</a></p>'
 					html += '<p class="exit-button">Exit</p></div>';
 					html += '</div>'
 					$('#' + data.id).addClass('animated fadeInUp');
@@ -87,7 +87,7 @@ function ajax(){
 
 function footerOut(){
 	$('#footer').css({
-		"height": 80 + "%"
+		"height": 100 + "%"
 	});
 	$('#footer').removeClass('fadeInDown');
 	$('#footer').addClass('animated fadeInUp');
@@ -97,7 +97,7 @@ function footerOut(){
 function footerIn(){
 	$('#footer_content').hide();
 	$('#footer').css({
-		"height": 70 + "px"
+		"height": 10 + "%"
 	});
 	$('#footer').removeClass('fadeInUp');
 	$('#footer').addClass('animated fadeInDown');
