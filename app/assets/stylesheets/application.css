@@ -113,7 +113,16 @@ div {
 }
 
 #about {
-	font-family: 'Raleway';
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+
+}
+
+#footer_content {
+	background-color: white;
+	width: 70%;
+	margin: 0 auto;
+	border-radius: 12px;
 }
 
 #footer div {
@@ -148,7 +157,6 @@ div {
 	margin: 5px;
 	width: 7%;
 	height: 16.8%;
-
 	opacity: 0;
 }
 
@@ -172,12 +180,23 @@ div {
 }
 
 
-#teachers {
+/*#teachers {
 	width: 50%;
 	height: auto;
 	margin-bottom: 10px;
-}
+	-moz-border-radius: 1800px;
+ 	-webkit-border-radius: 180px;
+ 	border-radius: 180px;
+/*	width:200px;
+	height:200px;
+}*/
 
+.teacherimg {
+	width: 20%;
+	padding: 20px;
+	height: auto;
+	margin-bottom: 10px;
+}
 
 #infoimg {
 	height: 90%;
