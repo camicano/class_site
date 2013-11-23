@@ -125,6 +125,14 @@ div {
 	border-radius: 12px;
 }
 
+#footer p {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	color: #292929;
+	font-size: 1.2em;
+	padding: 20px;
+}
+
 #footer div {
 	padding: .7%;
 }
@@ -217,6 +225,10 @@ div {
 	-moz-border-radius: 30px;
 	border-radius: 30px;
 }
+
+
+
+
 
 
 
