@@ -170,6 +170,7 @@ div {
 }
 
 #underline {
+	color: white;
 	background-color: #292929;
 	border-radius: 10px;
 	padding: 2px;
@@ -247,6 +248,7 @@ div {
 	color: #292929;
 	width: 266px;
 	margin: 0 auto;
+	padding:;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
