@@ -52,5 +52,4 @@ production:
   database: class_site_production
   pool: 5
   username: mjw
-  
   host: localhost

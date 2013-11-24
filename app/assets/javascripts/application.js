@@ -44,31 +44,36 @@ function ajax(){
 				}).done(function(data){
 					$('#container :not("#'+data.id+'")').hide();
 					$('#'+data.id+'').css({
-						"width": '80%',
+						"width": '90%',
 						"height": '80%',
-						"left": "10%",
+						"left": "5%",
 						"top": "5%",
-						"opacity": "0.8"
+						// "opacity": "0.4"
 					});
 
 
 					var html = '<div class="info">';
-					html += '<div id="infoimg"><img src="' + student.photo_link + '" /></div>';
-					html +='<div class="studentinfo"><h2>' + student.name + '</h2>';
-					// html += '<p>' + student.github + '</p>';
-					html += '<h3>' + student.email + '</h3>';
+							html += '<div id="infoimg"><img src="' + student.photo_link + '" /></div>';
+							html +='<div id="student_content">';
+								html +='<div id="student_text">';
+									html += '<h2>' + student.name + '</h2>';
+									html += '<p>' + student.github + '</p>';
 
-					html += '<img id="projimg" src="' + student.project_photo_url + '" />';
+									if(student.website){
+										var link = student.website;
+									} else{
+										 link = student.github;						
+									}
 
-					if(student.website){
-						var link = student.website;
-					}else{
-						var link = student.github;						
-					}
-
-					html += '<p><a href="' + link + '" target="blank">More about '+ student.name +'</a></p>'
-					// html += '<p class="exit-button">Exit</p></div>';
-					html += '</div>'
+									html += '<p><a href="' + link + '" target="blank">More about '+ student.name +'</a></p>';
+								html += '</div>';
+								html += '<div id ="screenshot">';
+									html += '<img id="projimg" src="' + student.project_photo_url + '" />';
+								html += '</div>';
+								html += '<div id= "exit"><p class="exit-button">Exit</p></div>';
+							html += '</div>';
+					html += '</div>';
+					
 					$('#' + data.id).addClass('animated fadeInUp');
 					$('#' + data.id).append(html);
 
@@ -92,6 +97,8 @@ function footerOut(){
 	$('#footer').removeClass('fadeInDown');
 	$('#footer').addClass('animated fadeInUp');
 	$('#footer_content').show();
+	$('#about').hide();
+	$('#footer-button').show();
 }
 
 function footerIn(){
@@ -101,6 +108,8 @@ function footerIn(){
 	});
 	$('#footer').removeClass('fadeInUp');
 	$('#footer').addClass('animated fadeInDown');
+	$('#about').show();
+	$('#footer-button').hide();
 }
 
 $(function(){

@@ -54,9 +54,9 @@ body {
 	/*background-repeat: no-repeat;*/
 	padding: 0px;
 	margin: 0px;
-	font-family: 'Aller';
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 	font-size: 0.7em;
-	color: white;
 }
 
 div {
@@ -64,6 +64,23 @@ div {
 	margin: 0px;
 }
 
+
+.button {
+	background: none;
+	border: 2px solid #fff;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #fff;
+	width: 266px;
+	font-weight: 300;
+	color: #fff;
+	width: 266px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 
 #footer {
 	padding: 0px;
@@ -89,7 +106,27 @@ div {
 }
 
 #about {
-	font-family: 'Raleway';
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+
+}
+
+
+#footer_content {
+	background-color: white;
+	width: 70%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	border-radius: 12px;
+}
+
+#footer p {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	color: #292929;
+	font-size: 1.5em;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #footer div {
@@ -106,31 +143,33 @@ div {
 } 
 
 .info {
-	background: #AAA; 
+	background: white; 
 	opacity: 1;
 	width: 100%;
 	height: 100%;
-	display: inline-block;
+	position: absolute;
+	display: inline;
+	border-radius: 12px;
+
 }
 
 .info div {
-	width: 40%;
-	height: 100%;
-	display: inline-block;
+	display: inline;
 }
 .student {
 	font-size: 1.5em;
 	margin: 5px;
 	width: 7%;
 	height: 16.8%;
-
 	opacity: 0;
 }
 
 #underline {
-	background-color: black;
-	border-radius: 2px;
+	color: white;
+	background-color: #292929;
+	border-radius: 10px;
 	padding: 2px;
+	text-align: center;
 }
 
 .student:hover {
@@ -147,48 +186,86 @@ div {
 }
 
 
-#teachers {
-	width: 50%;
+.teacherimg {
+	width: 20%;
+	padding-left: 20px;
 	height: auto;
 	margin-bottom: 10px;
 }
 
 
-#infoimg {
-	height: 90%;
-	padding-left: 5%;
-	margin-top: 2%;
-	margin-bottom: 15%;
-
-}
 
 #infoimg img {
 	height: 100%;
-	margin-bottom: 15%;
-	position: relative;
+	width: 35%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	border-bottom-left-radius: 12px;
+	border-top-left-radius: 12px;
+}
+
+#student_content {
+	height: 100%;
+	width: 65%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	text-align: center;
+	
+}
+
+#screenshot img{
+	width: 70%;
+	height: 50%;
+	border: 5px solid #292929;
+	border-radius: 12px;
+}
+
+#student_content h2 {
+	font-size: 3em;
+	
 }
 
 #projimg {
-	height: 50%;
-	width: 80%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+#projimg img {
+	width: 90%;
+	height: 100%;
 	position: relative;
-	overflow: auto;
-	border: solid 25px white;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
-	margin-bottom: 25%;
-	margin-right: 10%;
-	margin-left: 10%;
+	
 }
 
-h2, h3 {
+#footer-button, .exit-button {
+	background: none;
+	border: 2px solid #292929;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #fff;
+	width: 266px;
+	margin-top: 40px;
+	font-weight: 400;
+	font-size: 2em;
+	color: #292929;
+	width: 266px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#exit {
+	bottom: 0;
 }
 
-/*.studentinfo {
-	margin-bottom: 55%;
-}
-*/
+
 
 
 
