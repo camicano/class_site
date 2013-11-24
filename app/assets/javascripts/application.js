@@ -56,6 +56,9 @@ function ajax(){
 						"top": "5%",
 						// "opacity": "0.4"
 					});
+
+					$(id).off('click');	
+
 					
 
 
@@ -68,9 +71,8 @@ function ajax(){
 
 									if(student.website){
 										var link = student.website;
-									} else{
-										 link = student.github;						
-									}
+									 } 				
+									
 
 									html += '<p><a href="' + link + '" target="blank">More about '+ student.name +'</a></p>';
 								html += '</div>';
