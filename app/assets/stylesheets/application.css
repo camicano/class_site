@@ -10,6 +10,7 @@
  *
  *= require animate
  *= require_self
+ *= require font-awesome
  *= require_tree .
  */
 
@@ -243,7 +244,7 @@ div {
 	
 }
 
-#footer-button, .exit-button {
+#footer-button {
 	background: none;
 	border: 2px solid #292929;
 	-webkit-border-radius: 5px;
@@ -263,6 +264,17 @@ div {
 }
 
 
+#modal {
+	background-color: black;
+}
+
+.exit-button {
+	top: 0;
+	right: 0;
+	float: right;
+	padding-right: 10px;
+	padding-top: 10px;
+}
 
 
 

@@ -42,6 +42,11 @@ function ajax(){
 					method: 'get',
 					dataType: 'json'
 				}).done(function(data){
+					$('#modal').css({
+						"width": '100%',
+						"height": '100%',
+						"background-color": "black",
+					});
 					$('#container :not("#'+data.id+'")').hide();
 					$('#'+data.id+'').css({
 						"width": '90%',
@@ -50,12 +55,16 @@ function ajax(){
 						"top": "5%",
 						// "opacity": "0.4"
 					});
+
 					$(id).off('click');	
+
+					
 
 
 					var html = '<div class="info">';
 							html += '<div id="infoimg"><img src="' + student.photo_link + '" /></div>';
 							html +='<div id="student_content">';
+								html += '<div class="exit-button"><i class="fa fa-times fa-2x"></i></div>'; 
 								html +='<div id="student_text">';
 									html += '<h2>' + student.name + '</h2>';
 
@@ -67,11 +76,12 @@ function ajax(){
 									html += '<p><a href="' + link + '" target="blank">More about '+ student.name +'</a></p>';
 								html += '</div>';
 								html += '<div id ="screenshot">';
-									html += '<img id="projimg" src="' + student.project_photo_url + '" />';
+								html += '<img id="projimg" src="' + student.project_photo_url + '" />';
 								html += '</div>';
-								html += '<div id= "exit"><p class="exit-button">Exit</p></div>';
+								// html += '<div id= "exit"><p class="exit-button">Exit</p></div>';
 							html += '</div>';
 					html += '</div>';
+						
 					
 					$('#' + data.id).addClass('animated fadeInUp');
 					$('#' + data.id).append(html);
