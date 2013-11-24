@@ -42,6 +42,7 @@ function ajax(){
 					method: 'get',
 					dataType: 'json'
 				}).done(function(data){
+					$('#modal').show();
 					$('#modal').css({
 						"width": '100%',
 						"height": '100%',
