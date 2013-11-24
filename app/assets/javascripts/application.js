@@ -27,11 +27,13 @@ function ajax(){
 			var html = '<div class="student" id="' + student.id + '"><p id="underline">' + student.name + '</p><img id="triangle" src="assets/triangle.png" /><div class="' + student.id + '"></div></div>';
 			$('#container').append(html);
 			var id = '#' + student.id;
+			
 			$('#' + student.id).css({
 				"position": "absolute",
 				"left": student.left_percent + '%',
 				"top": student.top_percent
 			});
+			
 			$(id).on('click', function(e){
 				e.preventDefault();
 				// $('.info').empty();
@@ -54,35 +56,28 @@ function ajax(){
 						"height": '80%',
 						"left": "5%",
 						"top": "5%",
-						// "opacity": "0.4"
 					});
 
 					$(id).off('click');	
 
-					
-
-
 					var html = '<div class="info">';
-							html += '<div id="infoimg"><img src="' + student.photo_link + '" /></div>';
-							html +='<div id="student_content">';
-								html += '<div class="exit-button"><i class="fa fa-times fa-2x"></i></div>'; 
-								html +='<div id="student_text">';
-									html += '<h2>' + student.name + '</h2>';
+					html += '<div id="infoimg"><img src="' + student.photo_link + '" /></div>';
+					html +='<div id="student_content">';
+					html += '<div class="exit-button"><i class="fa fa-times fa-2x"></i></div>'; 
+					html +='<div id="student_text">';
+					html += '<h2>' + student.name + '</h2>';
 
-									if(student.website){
-										var link = student.website;
-									 } 				
-									
+					if(student.website){
+						var link = student.website;
+					}else{
+						var link = 'http://github.com/' + student.github;
+					} 		
 
-									html += '<p><a href="' + link + '" target="blank">More about '+ student.name +'</a></p>';
-								html += '</div>';
-								html += '<div id ="screenshot">';
-								html += '<img id="projimg" src="' + student.project_photo_url + '" />';
-								html += '</div>';
-								// html += '<div id= "exit"><p class="exit-button">Exit</p></div>';
-							html += '</div>';
+					html += '<p><a href="' + link + '" target="blank">More about '+ student.name +'</a></p>';
 					html += '</div>';
-						
+					html += '<div id ="screenshot">';
+					html += '<img id="projimg" src="' + student.project_photo_url + '" />';
+					html += '</div></div></div>';
 					
 					$('#' + data.id).addClass('animated fadeInUp');
 					$('#' + data.id).append(html);
@@ -114,7 +109,7 @@ function footerOut(){
 function footerIn(){
 	$('#footer_content').hide();
 	$('#footer').css({
-		"height": 10 + "%"
+		"height": 13 + "%"
 	});
 	$('#footer').removeClass('fadeInUp');
 	$('#footer').addClass('animated fadeInDown');
@@ -123,8 +118,8 @@ function footerIn(){
 }
 
 $(function(){
-	$('#footer_content').hide();
 	ajax();
+	$('#footer_content').hide();
 	$('#about').on('click', function(e){
 		e.preventDefault();
 		footerOut();

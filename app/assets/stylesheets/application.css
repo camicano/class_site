@@ -9,50 +9,44 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require animate
- *= require_self
  *= require font-awesome
+ *= require_self
  *= require_tree .
  */
 
- img.bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
+img.bg {
+  	/* Set rules to fill background */
+  	min-height: 100%;
+  	min-width: 1024px;
 	
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
+  	/* Set up proportionate scaling */
+  	width: 100%;
+  	height: auto;
 	
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+  	/* Set up positioning */
+  	position: fixed;
+  	top: 0;
+  	left: 0;
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
+  	img.bg {
+    	left: 50%;
+    	margin-left: -512px;   /* 50% */
+  	}
 }
 
-/*html {
-	padding: 0px;
-}*/
-
 html { 
-  background: url(main.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background: url(main.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 1;
 }
 
 body {
-	/*background-image: url('main.png');*/
-	/*width: 100%;*/
-	/*height: 90%;*/
-	/*background-repeat: no-repeat;*/
 	padding: 0px;
 	margin: 0px;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -65,12 +59,13 @@ div {
 	margin: 0px;
 }
 
-
 .button {
 	background: none;
 	border: 2px solid #fff;
 	-webkit-border-radius: 5px;
-	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 	text-align: center;
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
@@ -90,7 +85,6 @@ div {
 	background-color: #292929;
 	color: white;
 	position: fixed;
-	/*height: 70px;*/
 	bottom: 0px;
 	text-align: center;	
 	-webkit-animation-duration: 0.5s;
@@ -99,19 +93,10 @@ div {
 	-o-animation-duration: 0.5s;
 }
 
-#img {
-	float: right;
-	padding: 5px;
-	height: 140px;
-	width: auto;
-}
-
 #about {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
-
 }
-
 
 #footer_content {
 	background-color: white;
@@ -151,12 +136,12 @@ div {
 	position: absolute;
 	display: inline;
 	border-radius: 12px;
-
 }
 
 .info div {
 	display: inline;
 }
+
 .student {
 	font-size: 1.5em;
 	margin: 5px;
@@ -186,15 +171,12 @@ div {
 	height: auto;
 }
 
-
 .teacherimg {
 	width: 20%;
 	padding-left: 20px;
 	height: auto;
 	margin-bottom: 10px;
 }
-
-
 
 #infoimg img {
 	height: 100%;
@@ -215,7 +197,6 @@ div {
 	right: 0;
 	overflow: scroll;
 	text-align: center;
-	
 }
 
 #screenshot img{
@@ -226,28 +207,28 @@ div {
 }
 
 #student_content h2 {
-	font-size: 3em;
-	
+	font-size: 3em;	
 }
 
 #projimg {
 	top: 0;
 	width: 100%;
 	height: 100%;
-
 }
 
 #projimg img {
 	width: 90%;
 	height: 100%;
 	position: relative;
-	
 }
 
 #footer-button {
 	background: none;
 	border: 2px solid #292929;
 	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 	border-radius: 5px;
 	text-align: center;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -271,9 +252,15 @@ div {
 	padding-top: 10px;
 }
 
+#img {
+	float: right;
+	padding: 5px;
+	height: 140px;
+	width: auto;  
+}
 
 
 
 
 
-
+   
