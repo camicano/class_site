@@ -212,7 +212,7 @@ div {
 	position: absolute;
 	top: 0;
 	right: 0;
-	overflow: hidden;
+	overflow: scroll;
 	text-align: center;
 	
 }
@@ -261,9 +261,7 @@ div {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-#exit {
-	bottom: 0;
-}
+
 
 
 

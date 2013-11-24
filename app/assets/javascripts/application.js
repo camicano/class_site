@@ -50,6 +50,7 @@ function ajax(){
 						"top": "5%",
 						// "opacity": "0.4"
 					});
+					$(id).off('click');	
 
 
 					var html = '<div class="info">';
@@ -57,13 +58,11 @@ function ajax(){
 							html +='<div id="student_content">';
 								html +='<div id="student_text">';
 									html += '<h2>' + student.name + '</h2>';
-									html += '<p>' + student.github + '</p>';
 
 									if(student.website){
 										var link = student.website;
-									} else{
-										 link = student.github;						
-									}
+									 } 				
+									
 
 									html += '<p><a href="' + link + '" target="blank">More about '+ student.name +'</a></p>';
 								html += '</div>';
