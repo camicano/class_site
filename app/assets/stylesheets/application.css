@@ -120,7 +120,7 @@ div {
 }
 
 #footer .ga {
-	width: 100px;
+	width: 20%;
 	height: auto;
 }
 
@@ -257,6 +257,11 @@ div {
 	padding: 5px;
 	height: 140px;
 	width: auto;  
+}
+
+span {
+	padding-right: 15px;
+	font-weight: bold;
 }
 
 

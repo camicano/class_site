@@ -22,7 +22,7 @@ Student.create name: 'Javier Fernandez', email: 'jfernadel@gmail.com', github: '
 Student.create name: 'Joseph Jung', email: 'joej21@gmail.com', github: 'joe21', website:	'http://www.joehjung.com', left_percent: '38%', top_percent: '32%', photo_link: 'assets/joe.png', project_photo_url: 'assets/joerudyproj.png'
 Student.create name: 'Winson Yuan', email: 'winson.yuan@hotmail.com', left_percent: '50%', top_percent: '30%', photo_link: 'assets/winny.png', github: 'Orkish', project_photo_url: 'assets/winnywesproj.png'
 Student.create name: 'Michael Glumac', email: 'mglumac@gmail.com', left_percent: '62.3%', top_percent: '32%', photo_link: 'assets/michael.png', github: 'glumac', project_photo_url: 'assets/michaelproj.png'
-Student.create name: 'David Han',	email: 'davidhan527@gmail.com', github: 'davidhan527',	website: 'www.han-david.com', left_percent: '74%', top_percent: '32%', photo_link: 'assets/david.png', project_photo_url: 'assets/davidproj.jpg'
+Student.create name: 'David Han',	email: 'davidhan527@gmail.com', github: 'davidhan527',	left_percent: '74%', top_percent: '32%', photo_link: 'assets/david.png', project_photo_url: 'assets/davidproj.jpg'
 Student.create name: 'Stan Kudrow', email: 'st4sik@gmail.com', left_percent: '84%', top_percent: '37%', photo_link: 'assets/stan.png', github: 'stankud', project_photo_url: 'assets/stanadamproj.png'
 
 
